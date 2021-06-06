@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box-glasses">
+            <div class="box box-signin">
+                <h2>Already have an account?</h2>
+                <button id="btn-signin" class="btn-signin">Sign in</button>
+            </div>
+            <div class="box box-signup">
+                <h2>Don't have an account?</h2>
+                <button id="btn-signup" class="btn-signup">Sign up</button>
+            </div>
+        </div>
+        <div class="form-box">
+            <div class="form">
+                <div class="box form-signin">
+                    <div class="logo">
+                        <h1>Mr. Nurd</h1>
+                        <h3>Sites</h3>
+                    </div>
+                    <form action="">
+                        <h2>Sign in</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <input type="button" value="Login">
+                        <a class="forgot" href="">Forgot Password</a>
+                    </form>
+                </div>
+                <div class="box form-signup">
+                    <div class="logo">
+                        <h1>Mr. Nurd</h1>
+                        <h3>Sites</h3>
+                    </div>
+                    <form action="">
+                        <h2>Sign up</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Repeat Password">
+                        <input type="button" value="Register">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btnSignin = document.getElementById('btn-signin');
+        const btnSignup = document.getElementById('btn-signup');
+        const body = document.querySelector('body');
+        const formBox = document.querySelector('.form-box');
+
+        btnSignup.onclick = function(){
+            formBox.classList.add('active');
+            body.classList.add('active');
+        }
+        btnSignin.onclick = function(){
+            formBox.classList.remove('active');
+            body.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
